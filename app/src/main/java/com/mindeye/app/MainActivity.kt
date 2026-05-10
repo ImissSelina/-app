@@ -29,5 +29,12 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+        // 启动随境感知服务
+val serviceIntent = Intent(this, SenseFlowService::class.java)
+if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+    startForegroundService(serviceIntent)
+} else {
+    startService(serviceIntent)
+}
     }
 }
