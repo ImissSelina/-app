@@ -7,5 +7,6 @@ import dagger.hilt.components.SingletonComponent
 @Module
 @InstallIn(SingletonComponent::class)
 object SenseFlowModule {
-    // 这里暂时不需要额外绑定，SensorDataManager已经用@Singleton标记
+    @Binds
+    abstract fun bindSenseFlowApi(impl: SenseFlowApiImpl): SenseFlowApi
 }
