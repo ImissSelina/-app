@@ -1,3 +1,17 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+# Gradle 临时文件
+.gradle/
+build/
+*.lock
+*.bin
+*.gc.properties
+
+# Android Studio 本地配置
+.idea/
+*.iml
+local.properties
+
+# 其他常见
+.DS_Store
